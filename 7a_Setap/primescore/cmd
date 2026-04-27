@@ -1,0 +1,12 @@
+$env:FOOTBALL_API_KEY=""  
+$env:DB_USER=""
+$env:DB_PASSWORD=""
+python app.py
+-----------------------------------------------------------------------------
+
+python -m venv .venv
+# activate venv
+pip install -r requirements.txt
+export FOOTBALL_API_KEY= "" DB_USER="" DB_PASSWORD=""  # or PowerShell $env:...
+psql -d primescore -f db/schema.sql
+python app.py
